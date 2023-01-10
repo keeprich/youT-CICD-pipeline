@@ -1,0 +1,8 @@
+---
+- hosts: webserver
+  become: true
+  tasks:
+    - name: Copr the war frile frrom jenkins to the tomcat server
+      copy:
+        src: /opt/playbook/webapp/tartget/webapp.war
+        dest: /opt/apache-tomcat-8.5.84/webapps
